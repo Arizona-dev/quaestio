@@ -21,7 +21,7 @@
 						<div id="addModal" class="hidden">
 							<div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
 								<div class="p-6 bg-white border-b border-gray-200">
-									<form method="POST" action="{{ route('dashboard', 'articles') }}">
+									<form method="POST" action="{{ route('home', 'articles') }}">
 										@csrf
 
 										<h1>Updating</h1>
@@ -51,7 +51,7 @@
 						<div id="modModal" class="hidden">
 							<div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
 								<div class="p-6 bg-white border-b border-gray-200">
-									<form method="POST" action="{{ route('dashboard', 'articles') }}">
+									<form method="POST" action="{{ route('home', 'articles') }}">
 										@csrf
 
 										<h1>Updating</h1>
@@ -81,7 +81,7 @@
 						<div id="delModal" class="hidden">
 							<div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
 								<div class="p-6 bg-white border-b border-gray-200">
-									<form method="POST" action="{{ route('dashboard', 'articles') }}">
+									<form method="POST" action="{{ route('home', 'articles') }}">
 										@csrf
 							
 										<!-- Topic -->

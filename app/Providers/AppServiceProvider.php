@@ -37,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Blade::if('tab', function ($tab) {
-            return Request::is("dashboard/$tab");
+            return Request::is("$tab");
             // request()->route;
         });
 
