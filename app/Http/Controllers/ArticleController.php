@@ -26,10 +26,15 @@ class ArticleController extends Controller
         $request->validate([
             'topic' => 'required|max:255',
             'description' => 'required|max:10000',
-            'tags' => 'required|max:255',
+            'tags' => 'required|max:255'
         ]);
 
-        Article::create($request->all());
+        Article::create([
+            'topic' => request('topic'),
+            'description' => request('description'),
+            'tags' => request('tags'),
+            'user_id' => auth()->id()
+        ]);
 
         return redirect()->route('articles.index')
         ->with('success', 'Votre topic à bien été créé.');
