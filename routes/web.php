@@ -25,7 +25,7 @@ Route::get('/', function () { return view('welcome'); })->name('home');
 Route::get('/', function () {
     $articles = Article::paginate(5);
     return view('home', ['articles' => $articles]);
-})->name('home');
+})->middleware(['auth'])->name('home');
 
 Route::get('/dashboard', function () {
     $articles = Article::paginate(5);
