@@ -17,6 +17,10 @@ Use a better box model (opinionated).
   box-sizing: border-box;
 }
 
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
 /**
 Use a more readable tab size (opinionated).
 */

@@ -41,4 +41,6 @@
   <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>
 
+</div>
+
 @endsection

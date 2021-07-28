@@ -31,7 +31,7 @@ class ArticleController extends Controller
 
         Article::create([
             'topic' => request('topic'),
-            'description' => request('description'),
+            'description' => html_entity_decode(request('description')),
             'tags' => request('tags'),
             'user_id' => auth()->id()
         ]);
